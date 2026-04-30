@@ -5,8 +5,10 @@ import '../data/chatbot_training_examples.dart';
 import '../data/game_knowledge_base.dart';
 
 class AIGeneratedReplyService {
-  static const String _geminiApiKey =
-      'AIzaSyCaOBgEYhuIwTcj0_8i3hrno-7hpua4bHQ';
+  static const String _geminiApiKey = String.fromEnvironment(
+    'GEMINI_API_KEY',
+    defaultValue: '',
+  );
 
   static const String _geminiBase =
       'https://generativelanguage.googleapis.com/v1beta/models';
